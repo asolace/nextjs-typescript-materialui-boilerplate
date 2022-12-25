@@ -9,8 +9,6 @@ purple="\033[0;35m"
 skyblue="\033[0;36m"
 no_color="\033[0m"
 
-echo -e "\n${skyblue} Styling, testing and building your project before committing ${no_color}";
-
 # Format with prettier
 echo -e "${skyblue} ===== Formating your code with prettier ===== ${no_color}";
 npm run prettier-format ||
@@ -39,7 +37,7 @@ npm run check-types ||
 )
 
 # If everything passes... Now we can commit
-echo -e "\n${skyblue} Code looks good to me. Trying to build now... \n${no_color}"
+echo -e "\n${skyblue} All checks passed. Attempting to build now... \n${no_color}"
 npm run build ||
 (
   echo -e "\n${red}Better call Bob... Because your build failed ${no_color}
