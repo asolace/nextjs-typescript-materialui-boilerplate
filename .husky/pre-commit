@@ -46,4 +46,4 @@ npm run build ||
 )
 
 # If everything passes... Now we can commit
-echo -e  "\n${green} ✅✅✅✅ Everything looks good... Committing changes. ✅✅✅✅ \n${no_color}"
+echo -e  "\n${green} ✅✅✅✅ Everything looks good. Committing changes... ✅✅✅✅ \n${no_color}"
