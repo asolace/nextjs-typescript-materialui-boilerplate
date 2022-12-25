@@ -1,1 +1,4 @@
 next.config.js
+tsconfig.json
+package.json
+commitlint.config.js
