@@ -26,11 +26,19 @@ npm run eslint-format ||
 )
 
 # Check tsconfig standards
-echo -e "\n${skyblue} ===== Type checking... ===== ${no_color}";
+echo -e "\n${skyblue} ===== Type checking ===== ${no_color}";
 npm run check-types ||
 (
   echo -e  "${red} Failed Type check. ${no_color}
     Make the changes required above. \n"
+  false;
+)
+
+# Run jest test
+echo -e "\n${skyblue} ===== Unit testing ===== ${no_color}";
+npm run test || (
+  echo -e  "${red} Failed unit tests. ${no_color}
+    Run 'npm run test' and fix the failing tests. \n"
   false;
 )
 

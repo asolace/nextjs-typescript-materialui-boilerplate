@@ -30,7 +30,13 @@
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
     "moduleResolution": "node",
-    "incremental": true
+    "incremental": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@/public/*": ["./public/*"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
