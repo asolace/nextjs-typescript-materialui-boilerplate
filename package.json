@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check-commit-msg": "",
     "prettier-format": "prettier --write .",
     "eslint-format": "eslint --fix . --ext ts --ext tsx --ext js ",
     "check-types": "tsc --pretty --noEmit",
