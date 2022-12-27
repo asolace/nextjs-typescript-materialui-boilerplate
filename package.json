@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "coverage": "jest --coverage",
     "check-commit-msg": "",
     "prettier-format": "prettier --write .",
     "eslint-format": "eslint --fix . --ext ts --ext tsx --ext js ",
