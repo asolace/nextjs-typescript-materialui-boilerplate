@@ -20,7 +20,7 @@ const column2Links: ColumnLinksType[] = [
 
 const Footer = () => {
   return (
-    <Box bgcolor='white' color='text.secondary' px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }}>
+    <Box px={{ xs: 3, sm: 10 }} py={{ xs: 5, sm: 10 }}>
       <Container maxWidth='xl'>
         <Grid container spacing={5}>
           <ColumnLinks title='Products' links={column1Links} />

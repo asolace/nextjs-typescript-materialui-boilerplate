@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { MouseEvent, useState } from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
@@ -7,18 +7,21 @@ import Avatar from '@mui/material/Avatar';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
+import ColorModeSwitch from '@/features/ColorMode/ColorModeSwitch';
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ProfileMenu = () => {
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
-  const handleOpenProfileMenu = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOpenProfileMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseProfileMenu = () => {
     setAnchorElUser(null);
   };
+
   return (
     <Box sx={{ flexGrow: 0 }}>
       <Tooltip title='User settings'>
@@ -46,6 +49,9 @@ const ProfileMenu = () => {
             <Typography textAlign='center'>{setting}</Typography>
           </MenuItem>
         ))}
+        <MenuItem>
+          <ColorModeSwitch />
+        </MenuItem>
       </Menu>
     </Box>
   );
