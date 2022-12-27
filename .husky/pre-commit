@@ -38,7 +38,7 @@ npm run check-types ||
 echo -e "\n${skyblue} ===== Unit testing ===== ${no_color}";
 npm run test || (
   echo -e  "${red} Failed unit tests. ${no_color}
-    Run 'npm run test' and fix the failing tests. \n"
+    Run 'npm test' and fix the failing tests. \n"
   false;
 )
 

@@ -1,7 +1,9 @@
 import React from 'react';
 import type { ReactNode } from 'react';
-import Copyright from '@/components/copyright/Copyright';
-import { Header } from './Header';
+import { Box } from '@mui/system';
+
+import { Header } from './Header/Header';
+import Footer from './Footer/Footer';
 
 type IMainProps = {
   meta: ReactNode;
@@ -9,19 +11,14 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className='w-full text-gray-700 antialiased'>
+  <Box sx={{ height: '100vh' }}>
     {props.meta}
+    <Header />
 
-    <div className='mx-auto'>
-      <Header />
+    {props.children}
 
-      <div className='max-w-screen-md'>
-        <div className='content py-5 text-xl'>{props.children}</div>
-      </div>
-
-      <Copyright />
-    </div>
-  </div>
+    <Footer />
+  </Box>
 );
 
 export { Main };

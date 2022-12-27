@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { NextSeo } from 'next-seo';
+
 import { AppConfig } from '@/AppConfig';
 
 type IMetaProps = {

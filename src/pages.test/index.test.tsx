@@ -9,7 +9,7 @@ describe('Index', () => {
 
       const menuItemList = screen.getAllByRole('listitem');
 
-      expect(menuItemList).toHaveLength(4);
+      expect(menuItemList).toHaveLength(2);
     });
 
     it('should have a link to support asolace.me', () => {
